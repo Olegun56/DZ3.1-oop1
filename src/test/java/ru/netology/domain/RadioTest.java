@@ -8,7 +8,13 @@ public class RadioTest {
     @Test
     public void earlyExit() {
         Radio radio = new Radio();
-        radio.setCurrentStation(-5);
+        radio.setCurrentStation(-1);
+        assertEquals(0, radio.getCurrentStation());
+    }
+    @Test
+    public void earlyExitTwo() {
+        Radio radio = new Radio();
+        radio.setCurrentStation(10);
         assertEquals(0, radio.getCurrentStation());
     }
 
@@ -56,7 +62,13 @@ public class RadioTest {
     @Test
     public void earlyExitVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(15);
+        radio.setCurrentVolume(-1);
+        assertEquals(0, radio.getCurrentVolume());
+    }
+    @Test
+    public void earlyExitVolumeTwo() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(11);
         assertEquals(0, radio.getCurrentVolume());
     }
 
