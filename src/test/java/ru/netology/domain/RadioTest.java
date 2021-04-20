@@ -8,7 +8,7 @@ public class RadioTest {
     @Test
     public void earlyExit() {
         Radio radio = new Radio();
-        radio.setCurrentStation(14);
+        radio.setCurrentStation(-5);
         assertEquals(0, radio.getCurrentStation());
     }
 
@@ -56,7 +56,7 @@ public class RadioTest {
     @Test
     public void earlyExitVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(-2);
+        radio.setCurrentVolume(15);
         assertEquals(0, radio.getCurrentVolume());
     }
 

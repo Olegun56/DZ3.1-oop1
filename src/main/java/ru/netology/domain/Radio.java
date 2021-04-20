@@ -39,9 +39,9 @@ public class Radio {
     }
 
     public void setCurrentVolume(int currentVolume) {
-        if (currentVolume <= maxVolume && currentVolume >= minVolume) {
-            this.currentVolume = currentVolume;
-        }
+       if (currentVolume <= maxVolume && currentVolume >= minVolume) {
+           this.currentVolume = currentVolume;
+       }
 
     }
 
