@@ -14,22 +14,22 @@ public class RadioTest {
     @Test
     public void earlyExitTwo() {
         Radio radio = new Radio();
-        radio.setCurrentStation(10);
+        radio.setCurrentStation(11);
         assertEquals(0, radio.getCurrentStation());
     }
 
     @Test
     public void radioStation() {
         Radio radio = new Radio();
-        radio.setCurrentStation(9);
-        assertEquals(9, radio.getCurrentStation());
+        radio.setCurrentStation(10);
+        assertEquals(10, radio.getCurrentStation());
     }
 
 
     @Test
     public void switchRadioStationMax() {
         Radio radio = new Radio();
-        radio.setCurrentStation(9);
+        radio.setCurrentStation(10);
         radio.switchCurrentStationNext();
         assertEquals(0, radio.getCurrentStation());
 
@@ -40,7 +40,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
         radio.switchCurrentStationPrev();
-        assertEquals(9, radio.getCurrentStation());
+        assertEquals(10, radio.getCurrentStation());
 
     }
 
@@ -68,7 +68,7 @@ public class RadioTest {
     @Test
     public void earlyExitVolumeTwo() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(11);
+        radio.setCurrentVolume(111);
         assertEquals(0, radio.getCurrentVolume());
     }
 
@@ -107,9 +107,9 @@ public class RadioTest {
     @Test
     public void overMaxVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
         radio.increaseVolume();
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
 }
